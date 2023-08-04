@@ -1,7 +1,10 @@
 @font-face {
   font-family: 'Future';
-  src: url('Assets/Font/FutureF.ttf') format('truetype'), /* Modern Browsers */
+  src: url('Assets/Font/FutureF.woff2') format('woff2'), /* Super Modern Browsers */
+       url('Assets/Font/FutureF.woff') format('woff'), /* Pretty Modern Browsers */
+       url('Assets/Font/FutureF.ttf') format('truetype'); /* Safari, Android, iOS */
 }
+
 
 * {
   font-family: 'Nunito', sans-serif;

@@ -1,0 +1,525 @@
+@font-face {
+  font-family: 'Future';
+  src: url('Assets/Font/FutureF.ttf') format('truetype'), /* Modern Browsers */
+}
+
+* {
+  font-family: 'Nunito', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  --background: linear-gradient(150deg, rgba(0, 60, 60,0.5) 30%, rgba(0, 20, 80,0.5) 80%);
+  --background2: linear-gradient(150deg, rgb(0, 60, 60) 30%, rgb(0, 20, 80) 80%);
+}
+
+.noUL {
+  text-decoration: none;
+  display: inline;
+}
+
+body {
+  background-color: rgb(20, 20, 25);
+}
+
+.TopBar {
+  background-color: black;
+  padding: 3vh;
+  display: flex;
+  flex-flow: row wrap;
+  box-shadow: 0 0.5vh 0.5vh rgba(0, 0, 0, 0.2);
+  position: relative;                             /*Why wont Shadows work without this*/
+}
+
+.bottomBar {
+  background-color: black;
+  padding: 3vh;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.topList {
+  align-self: center;
+  margin-left: auto;
+}
+
+.TopItems {
+  display: inline;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.TopItemsS {
+  display: inline;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-bottom: 0.25rem solid rgb(0, 80, 255);
+}
+
+.MainHeading {
+  font-family: 'Future';
+  font-size: 2rem;
+  padding: 0.2rem;
+  align-self: center;
+}
+
+.mainGridTitle{
+  color: white;
+  font-family: 'Future';
+  font-size: 3rem;
+  margin: 1rem;
+  transition: 0.3s ease;
+}
+
+.title{
+  background: linear-gradient(45deg, #e100ff, #6f00ff, #003cff,#00fff2,#00ff62,#ff00b3);
+  background-clip: text;
+  color: transparent;
+  font-family: 'Future';
+  font-size: 8rem;
+  font-weight: 100;
+  background-size: 1000% auto;
+  animation: gradient-move 10s ease infinite;
+  padding: 1rem;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 20, 30);
+  padding: 0;
+}
+
+.flex2{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: top;
+  padding: 5rem 1rem 5rem 1rem;
+}
+
+.flexContent2{
+  display: block;
+  background-color: #0e0e0e;
+  border: 0.15rem solid black;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: large;
+  width: 14rem;
+  height: auto;
+  margin: 1rem;
+  padding: 1.5rem;
+  color: white;
+}
+
+.flexContentA{
+  background: var(--background);
+  padding: 4rem;
+  background-color: rgb(20, 20, 40);
+  border: 0.15rem solid rgb(10,10,10);
+  border-radius: 1rem;
+  text-align: center;
+  font-size: large;
+  transition: transform 0.2s ease-out;
+}
+
+.flexContentAFixed{
+  background: var(--background);
+  padding: 5vh;
+  background-color: rgb(20, 20, 40);
+  border: 0.15rem solid rgb(10,10,10);
+  border-radius: 1rem;
+  text-align: left;
+  font-size: large;
+  scale: .99;
+}
+
+.flexContentAFixed2{
+  background: #0e0e0e;
+  padding: 10vh;
+  border: 0.15rem solid black;
+  border-radius: 1rem;
+  text-align: left;
+  font-size: large;
+  scale: 1;
+}
+
+.flexContentA:hover{
+  transform: scale(0.95);
+}
+
+.flexContentB{
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 1.2rem;
+  transition: all 0.4s;
+  margin: 0.5rem;
+}
+
+.flexContentB:hover{
+  box-shadow: 0px 0px 15px 1px rgba(0, 255, 119, 0.4);
+}
+
+.bottomIco{
+  width: 2em;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  position: relative;       /*Did this to position correctly*/
+  top: 0.2rem;
+}
+
+.popBtmIcn:hover {
+  translate: 0rem 0.1rem;
+}
+
+#courses{
+  justify-content: left;
+  text-align: left;
+}
+
+#courseSlide{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  transform: scale(0.99);
+  text-align: left;
+  background: #0e0e0e;
+}
+
+#Cimg{
+  display: inline;
+}
+
+.btnTakeCourse{
+  color: black;
+  text-align: center;
+  font-weight: 600;
+  background-color: rgb(0, 240, 255);
+  display: inline-block;
+  padding: 1rem;
+  border: solid rgb(0, 130, 255);
+  border-radius: 50px;
+  transition: 0.2s ease;
+}
+
+.btnTakeCourse:hover{
+  background-color: rgb(0, 130, 255);
+}
+
+.Lalign{
+  text-align: left;
+}
+
+.Ralign{
+  text-align: right;
+}
+
+.videoBG {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.videoBG video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Starts - Code for Learn,Play,Create,Share Boxes*/
+
+.skewedA{
+  background-color: #090909;
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: .3rem .3rem 0 black;
+  transition: 0.3s;
+  bottom: 0rem;
+  right: 0rem;
+}
+.skewedA p{
+  display: none;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.skewedA img{
+  padding: 2rem;
+  margin: auto;
+  display: block;
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
+.skewedG{
+  background-color: #090909;
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: .3rem .3rem 0 black;
+  transition: 0.3s;
+  bottom: 0rem;
+  right: 0rem;
+}
+.skewedG p{
+  display: none;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.skewedG img{
+  padding: 2rem;
+  margin: auto;
+  display: block;
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
+.skewedY{
+  background-color: #090909;
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: .3rem .3rem 0 black;
+  transition: 0.3s;
+  bottom: 0rem;
+  right: 0rem;
+}
+.skewedY p{
+  display: none;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.skewedY img{
+  padding: 2rem;
+  margin: auto;
+  display: block;
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
+.skewedO{
+  background-color: #090909;
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: .3rem .3rem 0 black;
+  transition: 0.3s;
+  bottom: 0rem;
+  right: 0rem;
+}
+.skewedO p{
+  display: none;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.skewedO img{
+  padding: 2rem;
+  margin: auto;
+  display: block;
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
+.headerBar{
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.9);
+}
+
+.skewedA:hover{
+  transition: 0.3s;
+  bottom: 0.1rem;
+  right: 0.1rem;
+  box-shadow: 0.5rem 0.5rem 0 aqua;
+}
+.skewedG:hover{
+  transition: 0.3s;
+  bottom: 0.1rem;
+  right: 0.1rem;
+  box-shadow: 0.5rem 0.5rem 0 lime;
+}
+.skewedY:hover{
+  transition: 0.3s;
+  bottom: 0.1rem;
+  right: 0.1rem;
+  box-shadow: 0.5rem 0.5rem 0 yellow;
+}
+.skewedO:hover{
+  transition: 0.3s;
+  bottom: 0.1rem;
+  right: 0.1rem;
+  box-shadow: 0.5rem 0.5rem 0 orange;
+}
+
+.skewedA:hover #learn{
+  transition: 0.3s ease;
+  color: aqua;
+}
+
+.skewedG:hover #play{
+  transition: 0.3s ease;
+  color: lime;
+}
+
+.skewedY:hover #create{
+  transition: 0.3s ease;
+  color: yellow;
+}
+
+.skewedO:hover #share{
+  transition: 0.3s ease;
+  color: orange;
+}
+
+.skewedA:hover p{
+  display: block;
+  opacity: 1;
+  transition: 0.3s ease;
+}
+.skewedA:hover img{
+  display: none;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.skewedG:hover p{
+  display: block;
+  opacity: 1;
+  transition: 0.3s ease;
+}
+.skewedG:hover img{
+  display: none;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.skewedY:hover p{
+  display: block;
+  opacity: 1;
+  transition: 0.3s ease;
+}
+.skewedY:hover img{
+  display: none;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.skewedO:hover p{
+  display: block;
+  opacity: 1;
+  transition: 0.3s ease;
+}
+.skewedO:hover img{
+  display: none;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+/* Ends - Code for Learn,Play,Create,Share Boxes*/
+
+.moveUp{
+  position: relative;
+  top:2rem;
+}
+
+.moveDown{
+  position: relative;
+  top: -2rem;
+}
+
+.mainParaHead{
+  display: block;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+#mainFlex2{
+  display: none;
+}
+
+#paraContent2{
+  margin: 1rem;
+  text-align: left;
+  width: 50%;
+  display:inline-block;
+}
+
+#hLearning{
+  font-family: 'Future';
+  font-weight: 1000;
+  font-size: 3rem;
+  color: aqua;
+  margin: 0rem 0rem 1.5rem 0rem;
+}
+
+@media screen and (max-width:770px) {
+
+  #Wolfey{
+    font-size: 3rem;
+  }
+  .mainGridTitle{
+    font-size: 2rem;
+    transition: none;
+  }
+}
+
+@media screen and (max-width:660px) {
+  
+  #Pimg{
+    width: 50vw;
+  }
+  #Simg{
+    width: 30vw;
+  }
+  #courseBG{
+    display: none;
+  }
+
+  #skillFlex{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  
+}
+
+@media screen and (max-width:565px) {
+  #mainFlex{
+    display: none;
+  }
+
+  #mainFlex2{
+    display: block;
+  }
+
+  #BGVid{
+    display: none;
+  }
+}
+
+@media (pointer: fine) {
+  /* Rules for devices with mouse here */
+}

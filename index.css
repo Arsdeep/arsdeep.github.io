@@ -5,6 +5,10 @@
        url('Assets/Font/FutureF.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
+@font-face {
+  font-family: 'Nunito';
+  src: url('Assets/Font/Poppins-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
 
 * {
   font-family: 'Nunito', sans-serif;
@@ -479,6 +483,7 @@ body {
   margin: 0rem 0rem 1.5rem 0rem;
 }
 
+
 @media screen and (max-width:770px) {
 
   #Wolfey{
@@ -506,6 +511,7 @@ body {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
+    justify-content:flex-start;
   }
   
 }
